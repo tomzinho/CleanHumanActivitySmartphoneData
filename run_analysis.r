@@ -94,4 +94,8 @@ Data_tidy_label_removed <- subset(Data_Tidy, select = -c(label) )
 
 mean_by_subject <-  Data_tidy_label_removed %>% group_by(subject) %>% summarize_each(funs(mean))
 
+# Write data frames to CSV files
+
+write.csv(Data_Tidy,file="Data_Tidy.csv")
+write.csv(mean_by_subject,file="mean_by_subject.csv")
 
