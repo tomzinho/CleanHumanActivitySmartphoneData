@@ -10,12 +10,10 @@ library(downloader)
 
 library(dplyr)
 
-setwd("C:/Users/Tom/Documents/Coursera")
-
 if (!file.exists("clean")){dir.create("clean")}
     
-setwd("C:/Users/Tom/Documents/Coursera/clean")
-    
+setwd("clean") 
+
 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
 download(url, dest="Data.zip", mode="wb")
